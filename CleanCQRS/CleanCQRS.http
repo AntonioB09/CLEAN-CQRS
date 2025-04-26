@@ -1,0 +1,6 @@
+@CleanCQRS_HostAddress = http://localhost:5182
+
+GET {{CleanCQRS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
