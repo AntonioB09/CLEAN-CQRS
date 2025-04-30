@@ -17,3 +17,4 @@ C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Infrastructure\bin
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Infrastructure\bin\Debug\net8.0\Application.pdb
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
+C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json

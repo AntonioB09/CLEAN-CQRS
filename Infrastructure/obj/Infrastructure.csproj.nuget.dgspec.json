@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[11.11.0, )"
             },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.5.0, )"
@@ -204,6 +208,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.4, )"

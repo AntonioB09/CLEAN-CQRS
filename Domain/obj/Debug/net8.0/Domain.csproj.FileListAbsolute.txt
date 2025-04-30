@@ -10,3 +10,4 @@ C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Domain\obj\Debug\n
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Domain\obj\Debug\net8.0\Domain.sourcelink.json

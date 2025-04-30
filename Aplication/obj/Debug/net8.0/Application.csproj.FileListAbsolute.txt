@@ -13,3 +13,4 @@ C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Aplication\obj\Deb
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Aplication\obj\Debug\net8.0\refint\Application.dll
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Aplication\obj\Debug\net8.0\Application.pdb
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Aplication\obj\Debug\net8.0\ref\Application.dll
+C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\Aplication\obj\Debug\net8.0\Application.sourcelink.json

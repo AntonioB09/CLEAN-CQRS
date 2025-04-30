@@ -65,3 +65,8 @@ C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\CleanCQRS\bin\Debu
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\CleanCQRS\bin\Debug\net8.0\Application.dll
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\CleanCQRS\bin\Debug\net8.0\Application.pdb
 C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\CleanCQRS\obj\Debug\net8.0\CleanCQRS.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\CleanCQRS\obj\Debug\net8.0\CleanCQRS.sourcelink.json
+C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\CleanCQRS\bin\Debug\net8.0\MassTransit.dll
+C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\CleanCQRS\bin\Debug\net8.0\MassTransit.Abstractions.dll
+C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\CleanCQRS\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+C:\Users\ANTONIO\Desktop\DS-SUBASTAS-T10\CQRS-TESTS\CleanCQRS\CleanCQRS\bin\Debug\net8.0\RabbitMQ.Client.dll
