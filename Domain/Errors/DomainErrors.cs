@@ -52,6 +52,7 @@ public static class DomainErrors
         public static readonly Error Empty = Error.Validation(
             "PhoneNumber.Empty",
             "Phone number is empty.");
+
         public static readonly Error InvalidFormat = Error.Validation(
             "PhoneNumber.InvalidFormat",
             "Phone number format is invalid.");

@@ -40,5 +40,9 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
                 b.Property(a => a.State).HasColumnName(nameof(User.Address.State));
                 b.Property(a => a.ZipCode).HasColumnName(nameof(User.Address.ZipCode));
             });
+
+
     }
 }
+
+

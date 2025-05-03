@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories;
 
-internal sealed class UserRepository : IUserRepository
+internal sealed class UserWeiteRepository : IUserWriteRepository
 {
     private readonly ApplicationWriteDbContext _dbContext;
 
-    public UserRepository(ApplicationWriteDbContext dbContext)
+    public UserWeiteRepository(ApplicationWriteDbContext dbContext)
     {
         _dbContext = dbContext;
     }

@@ -3,10 +3,14 @@
 using Application.Data;
 using Domain.User;
 using Infrastructure.Data;
+using Infrastructure.RabbitMQ;
 using Infrastructure.Repositories;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Microsoft.VisualBasic.FileIO;
 using Shared;
 
 
@@ -26,21 +30,28 @@ public static class DependencyInjection
         string? connectionString = configuration.GetConnectionString("Database");
         Ensure.NotNullOrEmpty(connectionString);
 
-        services.AddTransient(_ => new DbConnectionFactory(connectionString));
+        // Configuración de MongoDB
+        services.AddSingleton(provider =>
+            new MongoDbContext(
+                configuration.GetConnectionString("MongoDB"),
+                configuration["MongoDB:DatabaseName"]
+            ));
 
-        services.AddDbContext<ApplicationWriteDbContext>(
-          options => options.UseNpgsql(connectionString)
-          );
+        services.AddDbContext<ApplicationWriteDbContext>(options =>
+        {
+            options.UseNpgsql(connectionString);
+        });
+        /* services.AddSingleton<PublishDomainEventsInterceptor>();*/
 
-        services.AddSingleton<PublishDomainEventsInterceptor>();
-
-
+ 
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationWriteDbContext>());
 
 
-        services.AddScoped<IUserRepository, UserRepository>();
 
-
+        services.AddScoped<IUserWriteRepository, UserWeiteRepository>();
     }
+
 }
+
+

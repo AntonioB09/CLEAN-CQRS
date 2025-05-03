@@ -6,8 +6,7 @@ using Domain.Errors;
 using Domain.Shared;
 using Domain.User;
 using Domain.User.ValueObjects;
-
-
+using Domain.Users;
 
 
 
@@ -15,13 +14,15 @@ namespace Application.UseCaseUser.Create;
 
 internal sealed class CreateUserCommandHandler : ICommandHandler<CreateUserCommand, UserId>
 {
-    private readonly IUserRepository _userRepository;
+    private readonly IUserWriteRepository _userWriteRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IEventBus _eventBus;
 
-    public CreateUserCommandHandler(IUserRepository userRepository, IUnitOfWork unitOfWork)
+    public CreateUserCommandHandler(IUserWriteRepository userRepository, IUnitOfWork unitOfWork, IEventBus eventBus)
     {
-        _userRepository = userRepository;
+        _userWriteRepository = userRepository;
         _unitOfWork = unitOfWork;
+        _eventBus = eventBus;
     }
 
     public async Task<Result<UserId>> Handle(CreateUserCommand command, CancellationToken cancellationToken)
@@ -33,7 +34,7 @@ internal sealed class CreateUserCommandHandler : ICommandHandler<CreateUserComma
         }
 
         Email email = emailResult.Value;
-        if (!await _userRepository.IsEmailUniqueAsync(email))
+        if (!await _userWriteRepository.IsEmailUniqueAsync(email))
         {
             return Result.Failure<UserId>(DomainErrors.UserErrors.EmailNotUnique);
         }
@@ -64,9 +65,21 @@ internal sealed class CreateUserCommandHandler : ICommandHandler<CreateUserComma
         
         var user = User.Create( firstname.Value, lastname.Value, email, phonenumber.Value, address.Value);
 
-        _userRepository.Insert(user);
-
+        _userWriteRepository.Insert(user);
+       
+        
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        //await _eventBus.PublishAsync(new UserCreatedDomainEvent(user.Id));
+
+        await _eventBus.PublishAsync(new UserCreatedEvent
+        {
+            Id = user.Id,
+            UserName = user.FirstName,
+            UserEmail = user.Email
+        },
+        cancellationToken
+        );
 
         return user.Id;
     }

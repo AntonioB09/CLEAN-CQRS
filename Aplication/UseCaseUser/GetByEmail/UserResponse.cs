@@ -1,10 +1,11 @@
-﻿using Domain.User.ValueObjects;
+﻿using Domain.User;
+using Domain.User.ValueObjects;
 
 namespace Application.UseCaseUser.GetByEmail;
 
 public sealed record UserResponse
 {
-    public Guid Id { get; init; }
+    public required UserId Id { get; init; }
 
     public required Email Email { get; init; }
 
