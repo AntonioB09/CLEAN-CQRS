@@ -1,12 +1,17 @@
-﻿namespace Infrastructure.Data.Models;
+﻿using Domain.User;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
 
-internal sealed class UserReadModel
+namespace Infrastructure.Data.Models;
+
+public sealed class UserReadModel
 {
+    [BsonGuidRepresentation(GuidRepresentation.Standard)]
     public Guid Id { get; set; }
 
-    public required string Name { get; set; }
+    public required string FirstName { get; set; }
 
-    public required string Email { get; set; }
+    
 
 
 }

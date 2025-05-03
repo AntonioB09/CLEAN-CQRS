@@ -1,7 +1,7 @@
 ﻿
 using Domain.Primitives;
 using Domain.User.ValueObjects;
-using Domain.Users;
+
 
 
 
@@ -37,7 +37,7 @@ namespace Domain.User
             };
               
 
-            user.Raise(new UserCreatedDomainEvent(user.Id));
+            user.Raise(new UserCreatedDomainEvent(user.Id, user.FirstName));
 
             return user;
         }

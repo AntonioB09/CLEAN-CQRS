@@ -6,7 +6,7 @@ using Domain.Errors;
 using Domain.Shared;
 using Domain.User;
 using Domain.User.ValueObjects;
-using Domain.Users;
+
 
 
 
@@ -70,16 +70,7 @@ internal sealed class CreateUserCommandHandler : ICommandHandler<CreateUserComma
         
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        //await _eventBus.PublishAsync(new UserCreatedDomainEvent(user.Id));
-
-        await _eventBus.PublishAsync(new UserCreatedEvent
-        {
-            Id = user.Id,
-            UserName = user.FirstName,
-            UserEmail = user.Email
-        },
-        cancellationToken
-        );
+        await _eventBus.PublishAsync(new UserCreatedDomainEvent(user.Id, user.FirstName));
 
         return user.Id;
     }

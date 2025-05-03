@@ -1,7 +1,7 @@
-﻿using Domain.User;
+﻿
 using Infrastructure.Data.Models;
+using MongoDB.Bson;
 using MongoDB.Driver;
-
 
 namespace Infrastructure.Data
 {
@@ -11,10 +11,13 @@ namespace Infrastructure.Data
 
         public MongoDbContext(string connectionString, string databaseName)
         {
+          
             var client = new MongoClient(connectionString);
             _database = client.GetDatabase(databaseName);
         }
 
-        public IMongoCollection<User?> Users => _database.GetCollection<User?>("Users");
+        public IMongoCollection<UserReadModel> Users => _database.GetCollection<UserReadModel>("Users");
     }
 }
+
+

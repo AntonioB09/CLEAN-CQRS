@@ -100,7 +100,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("UsersEvent");
                 });
 #pragma warning restore 612, 618
         }

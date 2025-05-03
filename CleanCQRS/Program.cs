@@ -1,6 +1,5 @@
 using Application;
 using Application.Messaging;
-using Application.UseCaseUser.Create;
 using CleanCQRS.Controllers;
 using Infrastructure;
 using Infrastructure.Data;
@@ -27,12 +26,16 @@ builder.Services.AddMassTransit(busconfiguation =>
     busconfiguation.UsingRabbitMq((context, configurator) =>
     {
         MessageBrokerSettings settings = context.GetRequiredService<MessageBrokerSettings>();
-
+        
         configurator.Host(new Uri(settings.Host), h =>
         {
             h.Username(settings.Username);
             h.Password(settings.Password);
 
+        });
+        configurator.ReceiveEndpoint("user-created-event-queue", endpoint =>
+        {
+            endpoint.ConfigureConsumer<UserCreatedEventConsumer>(context);
         });
     });
 });

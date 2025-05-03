@@ -13,7 +13,7 @@ public sealed class ApplicationWriteDbContext : DbContext, IUnitOfWork
     {
     }
 
-    public DbSet<User> Users { get; set; }
+    public DbSet<User> UsersEvent { get; set; }
 
 
 

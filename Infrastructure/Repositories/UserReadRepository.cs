@@ -1,11 +1,12 @@
 ﻿using Domain.User;
 using Domain.User.ValueObjects;
 using Infrastructure.Data;
+using Infrastructure.Data.Models;
 using MongoDB.Driver;
 
 
 namespace Infrastructure.Repositories
-{
+{/*
     public class UserReadRepository : IUserReadRepository
     {
         private readonly MongoDbContext _dbContext;
@@ -14,8 +15,8 @@ namespace Infrastructure.Repositories
         {
             _dbContext = dbContext;
         }
-
-        public async Task<User?> GetByIdAsync(UserId id, CancellationToken cancellationToken = default)
+        
+        public async Task<UserReadModel?> GetByIdAsync(UserId id, CancellationToken cancellationToken = default)
         {
             return await _dbContext.Users
                 .Find(u => u.Id == id)
@@ -35,5 +36,5 @@ namespace Infrastructure.Repositories
                 .Find(_ => true)
                 .ToListAsync(cancellationToken);
         }
-    }
+    }*/
 }

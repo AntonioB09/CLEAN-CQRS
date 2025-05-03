@@ -1,6 +1,7 @@
 ﻿using Domain.Errors;
 using Domain.Primitives;
 using Domain.Shared;
+using System.Text.Json.Serialization;
 
 namespace Domain.User.ValueObjects;
 
@@ -8,6 +9,7 @@ public sealed record FirstName
 {
     public const int MaxLength = 50;
 
+    [JsonConstructor]
     private FirstName(string value)
     {
         Value = value;

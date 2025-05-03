@@ -41,7 +41,7 @@ public static class DependencyInjection
         {
             options.UseNpgsql(connectionString);
         });
-        /* services.AddSingleton<PublishDomainEventsInterceptor>();*/
+       
 
  
 

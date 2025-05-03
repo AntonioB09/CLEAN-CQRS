@@ -1,8 +1,10 @@
 ﻿
 
 using Domain.Shared;
-using Domain.User;
+using Domain.User.ValueObjects;
 
-namespace Domain.Users;
 
-public sealed record UserCreatedDomainEvent(UserId id) : IDomainEvent;
+namespace Domain.User;
+
+public sealed record UserCreatedDomainEvent(UserId id, FirstName FirstName) : IDomainEvent;
+    

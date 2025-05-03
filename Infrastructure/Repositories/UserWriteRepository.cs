@@ -17,16 +17,16 @@ internal sealed class UserWeiteRepository : IUserWriteRepository
 
     public async Task<User?> GetByIdAsync(UserId id, CancellationToken cancellationToken = default)
     {
-        return await _dbContext.Users.FirstOrDefaultAsync(u => u.Id == id, cancellationToken);
+        return await _dbContext.UsersEvent.FirstOrDefaultAsync(u => u.Id == id, cancellationToken);
     }
 
     public async Task<bool> IsEmailUniqueAsync(Email email)
     {
-        return !await _dbContext.Users.AnyAsync(u => u.Email == email);
+        return !await _dbContext.UsersEvent.AnyAsync(u => u.Email == email);
     }
 
     public void Insert(User user)
     {
-        _dbContext.Users.Add(user);
+        _dbContext.UsersEvent.Add(user);
     }
 }
