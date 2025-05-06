@@ -13,9 +13,6 @@ namespace Application
 
 
             });
-
-           
-
             return services;
         }
 

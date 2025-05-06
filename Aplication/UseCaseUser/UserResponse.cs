@@ -1,0 +1,36 @@
+﻿using Domain.User;
+using Domain.User.ValueObjects;
+
+namespace Application.UseCaseUser;
+
+public sealed record UserResponse
+{
+    public Guid Id { get; set; }
+    public required string FirstName { get; set; }
+    public required string LastName { get; set; }
+    public required string Email { get; set; }
+    public required string PhoneNumber { get; set; }
+    public required AddressResponse Address { get; set; }
+
+    /* public Guid Id { get; init; }
+
+     public required Email Email { get; init; }
+
+     public required FirstName FirstName { get; init; }
+
+     public required LastName LastName { get; init; }*/
+
+
+}
+
+
+public sealed record AddressResponse
+{
+    public required string Country { get; set; }
+    public required string State { get; set; }
+    public required string City { get; set; }
+    public required string Street { get; set; }
+    public required string ZipCode { get; set; }
+    
+
+}

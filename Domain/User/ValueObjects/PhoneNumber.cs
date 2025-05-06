@@ -1,6 +1,7 @@
 using Domain.Errors;
 using Domain.Shared;
 using System.Text.RegularExpressions;
+using System.Text.Json.Serialization;
 
 
 namespace Domain.User.ValueObjects;
@@ -9,6 +10,8 @@ public sealed partial record PhoneNumber
 {
     private const int DefaultLenght = 9;
     private const string Pattern = @"^\+?[1-9]\d{1,14}$";
+
+    [JsonConstructor]
 
     private PhoneNumber(string value)
     {

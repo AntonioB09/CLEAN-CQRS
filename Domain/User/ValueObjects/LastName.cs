@@ -1,11 +1,14 @@
 ﻿using Domain.Errors;
 using Domain.Shared;
+using System.Text.Json.Serialization;
 
 namespace Domain.User.ValueObjects;
 
 public sealed record LastName 
 {
     public const int MaxLength = 50;
+
+    [JsonConstructor]
 
     private LastName(string value)
     {

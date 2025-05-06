@@ -1,10 +1,13 @@
 ﻿using Domain.Errors;
 using Domain.Shared;
+using System.Text.Json.Serialization;
 
 namespace Domain.User.ValueObjects;
 
 public sealed record Email
 {
+    [JsonConstructor]
+
     private Email(string value)
     {
         Value = value;

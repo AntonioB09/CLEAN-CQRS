@@ -15,16 +15,12 @@ public sealed class ApplicationWriteDbContext : DbContext, IUnitOfWork
 
     public DbSet<User> UsersEvent { get; set; }
 
-
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(
             typeof(ApplicationWriteDbContext).Assembly,
             WriteConfigurationsFilter);
     }
-
-
 
     private static bool WriteConfigurationsFilter(Type type) =>
         type.FullName?.Contains("Configurations.Write") ?? false;

@@ -1,6 +1,7 @@
 ﻿
 using Domain.Primitives;
 using Domain.User.ValueObjects;
+using System.Xml.Linq;
 
 
 
@@ -22,8 +23,7 @@ namespace Domain.User
 
         }
 
-        public static User Create(FirstName firstname, LastName lastName, Email email, PhoneNumber phoneNumber, Address address
-        )
+        public static User Create(FirstName firstname, LastName lastName, Email email, PhoneNumber phoneNumber, Address address)
         {
             var user = new User
             {
@@ -33,13 +33,35 @@ namespace Domain.User
                 Email = email,
                 PhoneNumber = phoneNumber,
                 Address = address
-
             };
               
-
-            user.Raise(new UserCreatedDomainEvent(user.Id, user.FirstName));
+            user.Raise(new UserCreatedDomainEvent(  user.Id, 
+                                                    user.FirstName,
+                                                    user.LastName,
+                                                    user.Email,
+                                                    user.PhoneNumber,
+                                                    user.Address
+                                                    ));
 
             return user;
+        }
+
+        public void UpdateUser(FirstName newFirstname, LastName newLastName, Email newEmail, 
+                               PhoneNumber newPhoneNumber, Address newAddress)
+        {   
+            FirstName = newFirstname;
+            LastName = newLastName;
+            Email = newEmail;
+            PhoneNumber = newPhoneNumber;
+            Address = newAddress;
+
+           Raise(new UserUpdatedEvent(FirstName,
+                                      LastName,
+                                      Email,
+                                      PhoneNumber,
+                                      Address
+                                      ));
+
         }
 
     }

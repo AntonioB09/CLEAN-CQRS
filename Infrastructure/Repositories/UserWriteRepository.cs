@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories;
 
-internal sealed class UserWeiteRepository : IUserWriteRepository
+internal sealed class UserWriteRepository : IUserWriteRepository
 {
     private readonly ApplicationWriteDbContext _dbContext;
 
-    public UserWeiteRepository(ApplicationWriteDbContext dbContext)
+    public UserWriteRepository(ApplicationWriteDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -29,4 +29,12 @@ internal sealed class UserWeiteRepository : IUserWriteRepository
     {
         _dbContext.UsersEvent.Add(user);
     }
+
+    public async Task<bool> ExistsAsync(UserId id) => await _dbContext.UsersEvent.AnyAsync(customer => customer.Id == id);
+
+    public void UpdateUser(User user)
+    {
+        _dbContext.UsersEvent.Update(user);
+    }
+
 }

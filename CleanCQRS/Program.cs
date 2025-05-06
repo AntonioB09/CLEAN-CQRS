@@ -1,12 +1,15 @@
 using Application;
 using Application.Messaging;
 using CleanCQRS.Controllers;
+using Domain.User;
 using Infrastructure;
+using Infrastructure.Repositories;
 using Infrastructure.Data;
 using Infrastructure.RabbitMQ;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using Application.UseCaseUser;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +29,7 @@ builder.Services.AddMassTransit(busconfiguation =>
     busconfiguation.UsingRabbitMq((context, configurator) =>
     {
         MessageBrokerSettings settings = context.GetRequiredService<MessageBrokerSettings>();
-        
+
         configurator.Host(new Uri(settings.Host), h =>
         {
             h.Username(settings.Username);
@@ -43,10 +46,6 @@ builder.Services.AddMassTransit(busconfiguation =>
 builder.Services.AddTransient<IEventBus, EventBus>();
 
 
-
-
-
-
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -56,7 +55,7 @@ builder.Services.AddSwaggerGen();
 builder.Services
     .AddApplication()
     .AddInfrastructure(builder.Configuration);
-
+builder.Services.AddTransient<IUserReadRepository, UserReadRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

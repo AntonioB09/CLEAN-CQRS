@@ -3,40 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B865776-813A-4359-8167-BC3AE8D2B704}|Domain\\Domain.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\domain\\user\\valueobjects\\firstname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B865776-813A-4359-8167-BC3AE8D2B704}|Domain\\Domain.csproj|solutionrelative:domain\\user\\valueobjects\\firstname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82B7A1C1-FCAD-4EEC-B936-138594F5A037}|Aplication\\Application.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\aplication\\usecaseuser\\update\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B7A1C1-FCAD-4EEC-B936-138594F5A037}|Aplication\\Application.csproj|solutionrelative:aplication\\usecaseuser\\update\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\infrastructure\\rabbitmq\\usercreatedeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\rabbitmq\\usercreatedeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82B7A1C1-FCAD-4EEC-B936-138594F5A037}|Aplication\\Application.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\aplication\\usecaseuser\\update\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B7A1C1-FCAD-4EEC-B936-138594F5A037}|Aplication\\Application.csproj|solutionrelative:aplication\\usecaseuser\\update\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\infrastructure\\data\\models\\userreadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\models\\userreadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD4F8B54-23BD-48D6-BE9C-75614FBD3486}|CleanCQRS\\CleanCQRS.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\cleancqrs\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4F8B54-23BD-48D6-BE9C-75614FBD3486}|CleanCQRS\\CleanCQRS.csproj|solutionrelative:cleancqrs\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\infrastructure\\repositories\\userwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\userwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B865776-813A-4359-8167-BC3AE8D2B704}|Domain\\Domain.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\domain\\user\\iuserwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B865776-813A-4359-8167-BC3AE8D2B704}|Domain\\Domain.csproj|solutionrelative:domain\\user\\iuserwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD4F8B54-23BD-48D6-BE9C-75614FBD3486}|CleanCQRS\\CleanCQRS.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\cleancqrs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4F8B54-23BD-48D6-BE9C-75614FBD3486}|CleanCQRS\\CleanCQRS.csproj|solutionrelative:cleancqrs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82B7A1C1-FCAD-4EEC-B936-138594F5A037}|Aplication\\Application.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\aplication\\usecaseuser\\create\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82B7A1C1-FCAD-4EEC-B936-138594F5A037}|Aplication\\Application.csproj|solutionrelative:aplication\\usecaseuser\\create\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\infrastructure\\repositories\\userreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\userreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4F8B54-23BD-48D6-BE9C-75614FBD3486}|CleanCQRS\\CleanCQRS.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\cleancqrs\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{AD4F8B54-23BD-48D6-BE9C-75614FBD3486}|CleanCQRS\\CleanCQRS.csproj|solutionrelative:cleancqrs\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\infrastructure\\rabbitmq\\eventbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\rabbitmq\\eventbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B865776-813A-4359-8167-BC3AE8D2B704}|Domain\\Domain.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\domain\\user\\usercreateddomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B865776-813A-4359-8167-BC3AE8D2B704}|Domain\\Domain.csproj|solutionrelative:domain\\user\\usercreateddomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,8 +34,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\Program.cs",
+              "RelativeDocumentMoniker": "CleanCQRS\\Program.cs",
+              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\Program.cs",
+              "RelativeToolTip": "CleanCQRS\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T18:26:58.055Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateUserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Aplication\\UseCaseUser\\Update\\UpdateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "Aplication\\UseCaseUser\\Update\\UpdateUserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Aplication\\UseCaseUser\\Update\\UpdateUserCommandHandler.cs",
+              "RelativeToolTip": "Aplication\\UseCaseUser\\Update\\UpdateUserCommandHandler.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAACMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T04:31:38.153Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -66,112 +82,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FirstName.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Domain\\User\\ValueObjects\\FirstName.cs",
-              "RelativeDocumentMoniker": "Domain\\User\\ValueObjects\\FirstName.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Domain\\User\\ValueObjects\\FirstName.cs",
-              "RelativeToolTip": "Domain\\User\\ValueObjects\\FirstName.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "UserWriteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\Repositories\\UserWriteRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserWriteRepository.cs",
+              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\Repositories\\UserWriteRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\UserWriteRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAlwCAAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T18:29:50.217Z",
+              "WhenOpened": "2025-05-06T01:26:20.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\Program.cs",
-              "RelativeDocumentMoniker": "CleanCQRS\\Program.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\Program.cs",
-              "RelativeToolTip": "CleanCQRS\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAADwvxwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T18:26:58.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserCreatedDomainEvent.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Domain\\User\\UserCreatedDomainEvent.cs",
-              "RelativeDocumentMoniker": "Domain\\User\\UserCreatedDomainEvent.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Domain\\User\\UserCreatedDomainEvent.cs",
-              "RelativeToolTip": "Domain\\User\\UserCreatedDomainEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T18:13:42.095Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserReadModel.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\Data\\Models\\UserReadModel.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Data\\Models\\UserReadModel.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\Data\\Models\\UserReadModel.cs",
-              "RelativeToolTip": "Infrastructure\\Data\\Models\\UserReadModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T17:14:22.501Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CreateUserCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Aplication\\UseCaseUser\\Create\\CreateUserCommandHandler.cs",
-              "RelativeDocumentMoniker": "Aplication\\UseCaseUser\\Create\\CreateUserCommandHandler.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Aplication\\UseCaseUser\\Create\\CreateUserCommandHandler.cs",
-              "RelativeToolTip": "Aplication\\UseCaseUser\\Create\\CreateUserCommandHandler.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAkwEsAAAAFAAAAAAAAAA==",
+              "Title": "IUserWriteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Domain\\User\\IUserWriteRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\User\\IUserWriteRepository.cs",
+              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Domain\\User\\IUserWriteRepository.cs",
+              "RelativeToolTip": "Domain\\User\\IUserWriteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T16:58:42.932Z"
+              "WhenOpened": "2025-05-06T01:25:15.117Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserCreatedEventConsumer.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\RabbitMQ\\UserCreatedEventConsumer.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\RabbitMQ\\UserCreatedEventConsumer.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\RabbitMQ\\UserCreatedEventConsumer.cs",
-              "RelativeToolTip": "Infrastructure\\RabbitMQ\\UserCreatedEventConsumer.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAzwCIAAAA4AAAAAAAAAA==",
+              "Title": "UpdateUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Aplication\\UseCaseUser\\Update\\UpdateUserCommand.cs",
+              "RelativeDocumentMoniker": "Aplication\\UseCaseUser\\Update\\UpdateUserCommand.cs",
+              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Aplication\\UseCaseUser\\Update\\UpdateUserCommand.cs",
+              "RelativeToolTip": "Aplication\\UseCaseUser\\Update\\UpdateUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T16:57:53.584Z"
+              "WhenOpened": "2025-05-06T01:23:31.428Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EventBus.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\RabbitMQ\\EventBus.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\RabbitMQ\\EventBus.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\RabbitMQ\\EventBus.cs",
-              "RelativeToolTip": "Infrastructure\\RabbitMQ\\EventBus.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA3wBIAAAALAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "CleanCQRS\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "CleanCQRS\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAABwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T16:51:37.738Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "CleanCQRS\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\appsettings.Development.json",
-              "RelativeToolTip": "CleanCQRS\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAACBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-03T17:21:14.369Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\Repositories\\UserReadRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserReadRepository.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\Repositories\\UserReadRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\UserReadRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T17:23:03.242Z"
+              "WhenOpened": "2025-05-05T23:21:53.933Z",
+              "EditorCaption": ""
             }
           ]
         }

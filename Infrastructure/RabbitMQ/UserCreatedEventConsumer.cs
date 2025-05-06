@@ -10,6 +10,7 @@ using static MassTransit.Transports.ReceiveEndpoint;
 using System.IO;
 using System.Reflection.Emit;
 using Infrastructure.Data.Models;
+using MongoDB.Bson;
 
 namespace Infrastructure.RabbitMQ;
 
@@ -28,12 +29,22 @@ public sealed class UserCreatedEventConsumer : IConsumer<UserCreatedDomainEvent>
     {
         _logger.LogInformation("User Created : {@User}", context.Message);
 
-        // Map the domain event to the User entity
+        // Map the domain event to the model for mongo
         var user = new UserReadModel
         {
             Id = context.Message.id.Value,
             FirstName = context.Message.FirstName.Value,
-
+            LastName = context.Message.LastName.Value,
+            Email = context.Message.Email.Value,
+            PhoneNumber = context.Message.PhoneNumber.Value,
+            Address = new AddressReadModel
+            {
+                Street = context.Message.Address.Street,
+                City = context.Message.Address.City,
+                State = context.Message.Address.State,
+                ZipCode = context.Message.Address.ZipCode,
+                Country = context.Message.Address.Country
+            }
         };
 
         // Save the user to MongoDB
@@ -42,3 +53,4 @@ public sealed class UserCreatedEventConsumer : IConsumer<UserCreatedDomainEvent>
         _logger.LogInformation("User saved to MongoDB: {@User}", user);
     }
 }
+

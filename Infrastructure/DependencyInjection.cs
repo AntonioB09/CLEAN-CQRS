@@ -30,12 +30,23 @@ public static class DependencyInjection
         string? connectionString = configuration.GetConnectionString("Database");
         Ensure.NotNullOrEmpty(connectionString);
 
-        // Configuración de MongoDB
+        string? mongoConnectionString = configuration.GetConnectionString("MongoDB");
+        Ensure.NotNullOrEmpty(mongoConnectionString, nameof(mongoConnectionString));
+        string? mongoDatabaseName = configuration["MongoDB:DatabaseName"];
+        Ensure.NotNullOrEmpty(mongoDatabaseName, nameof(mongoDatabaseName));
+        services.AddSingleton(provider =>
+            new MongoDbContext(
+                mongoConnectionString,
+                mongoDatabaseName
+            ));
+
+
+        /* Configuración de MongoDB
         services.AddSingleton(provider =>
             new MongoDbContext(
                 configuration.GetConnectionString("MongoDB"),
                 configuration["MongoDB:DatabaseName"]
-            ));
+            ));*/
 
         services.AddDbContext<ApplicationWriteDbContext>(options =>
         {
@@ -49,7 +60,10 @@ public static class DependencyInjection
 
 
 
-        services.AddScoped<IUserWriteRepository, UserWeiteRepository>();
+        services.AddScoped<IUserWriteRepository, UserWriteRepository>();
+      
+
+
     }
 
 }

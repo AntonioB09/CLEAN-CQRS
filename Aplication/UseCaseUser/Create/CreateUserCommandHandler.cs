@@ -70,8 +70,14 @@ internal sealed class CreateUserCommandHandler : ICommandHandler<CreateUserComma
         
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        await _eventBus.PublishAsync(new UserCreatedDomainEvent(user.Id, user.FirstName));
-
+        await _eventBus.PublishAsync(new UserCreatedDomainEvent(
+                                                                user.Id, 
+                                                                user.FirstName,
+                                                                user.LastName,
+                                                                user.Email,
+                                                                user.PhoneNumber,
+                                                                user.Address),
+                                                                cancellationToken);
         return user.Id;
     }
 }

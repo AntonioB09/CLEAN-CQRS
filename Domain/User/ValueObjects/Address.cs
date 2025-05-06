@@ -1,10 +1,13 @@
 using Domain.Errors;
 using Domain.Shared;
+using System.Text.Json.Serialization;
+
 
 namespace Domain.User.ValueObjects;
 
 public sealed record Address 
 {
+    [JsonConstructor]
     private Address(string country, string street, string city, string state, string zipCode)
     {
         Country = country;
