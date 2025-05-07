@@ -27,7 +27,7 @@
         }
       }
     },
-    "/api/newUser/{userId}": {
+    "/api/updateUser/{userId}": {
       "put": {
         "tags": [
           "CleanCQRS"
@@ -72,7 +72,7 @@
         }
       }
     },
-    "/api/users/{userId}": {
+    "/api/user/{userId}": {
       "get": {
         "tags": [
           "CleanCQRS"

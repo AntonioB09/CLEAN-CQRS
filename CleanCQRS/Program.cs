@@ -25,6 +25,7 @@ builder.Services.AddMassTransit(busconfiguation =>
     busconfiguation.SetKebabCaseEndpointNameFormatter();
 
     busconfiguation.AddConsumer<UserCreatedEventConsumer>();
+    busconfiguation.AddConsumer<UserUpdatedEventConsumer>();
 
     busconfiguation.UsingRabbitMq((context, configurator) =>
     {
@@ -39,6 +40,10 @@ builder.Services.AddMassTransit(busconfiguation =>
         configurator.ReceiveEndpoint("user-created-event-queue", endpoint =>
         {
             endpoint.ConfigureConsumer<UserCreatedEventConsumer>(context);
+        });
+        configurator.ReceiveEndpoint("user-updated-event-queue", endpoint =>
+        {
+            endpoint.ConfigureConsumer<UserUpdatedEventConsumer>(context);
         });
     });
 });

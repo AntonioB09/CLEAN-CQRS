@@ -7,7 +7,7 @@ using Domain.User.ValueObjects;
 namespace Domain.User;
 
 public sealed record UserCreatedDomainEvent(
-    UserId id, 
+    UserId id,
     FirstName FirstName,
     LastName LastName,
     Email Email,

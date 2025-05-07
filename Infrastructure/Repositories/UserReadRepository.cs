@@ -6,6 +6,10 @@ using Application.UseCaseUser;
 using Domain.User;
 using System.Threading;
 using ZstdSharp;
+using Domain.Shared;
+using Domain.User.ValueObjects;
+using System.Collections.Generic;
+using static MassTransit.ValidationResultExtensions;
 
 namespace Infrastructure.Repositories;
 
@@ -18,16 +22,19 @@ public class UserReadRepository : IUserReadRepository
         _dbContext = dbContext;
     }
 
-    public async Task<UserResponse>GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
+    public async Task<UserResponse?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     {
-        var filter = Builders<UserReadModel>.Filter.Eq(u => u.Id, id);
         var user = await _dbContext.Users
             .Find(u => u.Id == id)
             .FirstOrDefaultAsync(cancellationToken);
 
-    
-        return MapToDto(user);
+        if (user != null)
+            return MapToDto(user);
+        return null;
+
     }
+
+
 
 
     public async Task<List<UserResponse>> GetAllAsync(CancellationToken cancellationToken)

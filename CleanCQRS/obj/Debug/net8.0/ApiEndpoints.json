@@ -18,7 +18,7 @@
   {
     "ContainingType": "CleanCQRS.Controllers.UserEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapUserEndpoints\u003Eb__0_1",
-    "RelativePath": "api/newUser/{userId}",
+    "RelativePath": "api/updateUser/{userId}",
     "HttpMethod": "PUT",
     "IsController": false,
     "Order": 0,
@@ -67,7 +67,7 @@
   {
     "ContainingType": "CleanCQRS.Controllers.UserEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapUserEndpoints\u003Eb__0_3",
-    "RelativePath": "api/users/{userId}",
+    "RelativePath": "api/user/{userId}",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,

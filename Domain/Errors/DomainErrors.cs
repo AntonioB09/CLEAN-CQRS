@@ -1,4 +1,5 @@
 ﻿using Domain.Shared;
+using Domain.User;
 
 namespace Domain.Errors;
 
@@ -60,7 +61,7 @@ public static class DomainErrors
 
     public static class UserErrors
     {
-        public static Error NotFound(Guid userId) => Error.NotFound(
+        public static Error NotFound(UserId userId) => Error.NotFound(
             "Users.NotFound", $"The user with the Id = '{userId}' was not found");
 
         public static Error NotFoundByEmail(string email) => Error.NotFound(

@@ -1,12 +1,12 @@
 ﻿using Application.Data;
 using Application.Messaging;
-using Application.UseCaseUser.Create;
-using Domain.Errors;
 using Domain.Shared;
 using Domain.User;
 using Domain.User.ValueObjects;
-
+using System.Net;
 using static Domain.Errors.DomainErrors;
+
+
 
 namespace Application.UseCaseUser.Update;
 
@@ -26,10 +26,10 @@ internal sealed class UpdateUserCommandHandler : ICommandHandler<UpdateUserComma
     public async Task<Result<User>> Handle(UpdateUserCommand command, CancellationToken cancellationToken)
     {
         // Check if the user exists
-       
+
         if (!await _userWriteRepository.ExistsAsync((command.Id)))
         {
-            throw new UserNotFoundException(command.Id);
+            return Result.Failure<User>(UserErrors.NotFound(command.Id));
         }
 
         // Retrieve the existing user
@@ -78,6 +78,15 @@ internal sealed class UpdateUserCommandHandler : ICommandHandler<UpdateUserComma
         // Save changes
         _userWriteRepository.UpdateUser(user);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        await _eventBus.PublishAsync(new UserUpdatedDomainEvent(
+                                                          user.Id,
+                                                          user.FirstName,
+                                                          user.LastName,
+                                                          user.Email,
+                                                          user.PhoneNumber,
+                                                          user.Address),
+                                                          cancellationToken);
 
         return user;
     }

@@ -8,6 +8,7 @@ using Domain.Shared;
 using Domain.User;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection;
 
 
 namespace CleanCQRS.Controllers;
@@ -24,7 +25,7 @@ public static class UserEndpoints
             : Results.BadRequest(result.Error.Description); 
         });
 
-        app.MapPut("api/newUser/{userId}", async (Guid userId, [FromBody] UpdateUserRequest request, ISender sender) =>
+        app.MapPut("api/updateUser/{userId}", async (Guid userId, [FromBody] UpdateUserRequest request, ISender sender) =>
         {
             var command = new UpdateUserCommand(
                           new UserId(userId),
@@ -57,7 +58,7 @@ public static class UserEndpoints
 
         });
 
-        app.MapGet("api/users/{userId}", async (Guid userId, ISender sender) =>
+        app.MapGet("api/user/{userId}", async (Guid userId, ISender sender) =>
         {
             var query = new GetUserByIdQuery(userId);
             Result<UserResponse> result = await sender.Send(query);

@@ -1,6 +1,6 @@
 ﻿
 using Domain.User;
-using Domain.User.ValueObjects;
+
 using Infrastructure.Data;
 using MassTransit;
 using MassTransit.Middleware;
@@ -11,6 +11,7 @@ using System.IO;
 using System.Reflection.Emit;
 using Infrastructure.Data.Models;
 using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace Infrastructure.RabbitMQ;
 
@@ -29,7 +30,8 @@ public sealed class UserCreatedEventConsumer : IConsumer<UserCreatedDomainEvent>
     {
         _logger.LogInformation("User Created : {@User}", context.Message);
 
-        // Map the domain event to the model for mongo
+
+        // Map the domain event to the mongo model
         var user = new UserReadModel
         {
             Id = context.Message.id.Value,
@@ -50,7 +52,7 @@ public sealed class UserCreatedEventConsumer : IConsumer<UserCreatedDomainEvent>
         // Save the user to MongoDB
         await _dbContext.Users.InsertOneAsync(user);
 
-        _logger.LogInformation("User saved to MongoDB: {@User}", user);
+        _logger.LogInformation("User update to MongoDB: {@User}", user);
     }
 }
 

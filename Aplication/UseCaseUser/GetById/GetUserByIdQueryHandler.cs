@@ -1,6 +1,9 @@
 ﻿using Application.Messaging;
 using Domain.Errors;
 using Domain.Shared;
+using Domain.User;
+using Domain.User.ValueObjects;
+using static Domain.Errors.DomainErrors;
 
 
 
@@ -17,9 +20,14 @@ public class GetUserByIdQueryHandler : IQueryHandler<GetUserByIdQuery, UserRespo
 
     public async Task<Result<UserResponse>> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
     {
-        var user = await _userReadRepository.GetByIdAsync(request.id);
+         var user = await _userReadRepository.GetByIdAsync(request.id);
 
-        return user == null ? Result.Failure<UserResponse>(DomainErrors.UserErrors.NotFound(request.id)) : (Result<UserResponse>)user;
+        if (user is null)
+        {
+            return Result.Failure<UserResponse>(UserErrors.NotFound(new UserId(request.id)));
+        }
+
+        return user;
     }
 }
 
