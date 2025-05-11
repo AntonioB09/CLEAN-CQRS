@@ -1,15 +1,13 @@
 using Application;
 using Application.Messaging;
-using CleanCQRS.Controllers;
-using Domain.User;
+using CleanCQRS.Endpoints;
 using Infrastructure;
 using Infrastructure.Repositories;
-using Infrastructure.Data;
 using Infrastructure.RabbitMQ;
 using MassTransit;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-using Application.UseCaseUser;
+using Application.UseCaseUser.IRepositories;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,6 +59,8 @@ builder.Services
     .AddApplication()
     .AddInfrastructure(builder.Configuration);
 builder.Services.AddTransient<IUserReadRepository, UserReadRepository>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

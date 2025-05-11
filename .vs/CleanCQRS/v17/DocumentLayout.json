@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\infrastructure\\repositories\\userreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{552960F6-AD88-4766-BFBE-34199B228CD0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\userreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4F8B54-23BD-48D6-BE9C-75614FBD3486}|CleanCQRS\\CleanCQRS.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\cleancqrs\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4F8B54-23BD-48D6-BE9C-75614FBD3486}|CleanCQRS\\CleanCQRS.csproj|solutionrelative:cleancqrs\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82B7A1C1-FCAD-4EEC-B936-138594F5A037}|Aplication\\Application.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\aplication\\usecaseuser\\getbyid\\getuserbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82B7A1C1-FCAD-4EEC-B936-138594F5A037}|Aplication\\Application.csproj|solutionrelative:aplication\\usecaseuser\\getbyid\\getuserbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4F8B54-23BD-48D6-BE9C-75614FBD3486}|CleanCQRS\\CleanCQRS.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\cleancqrs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4F8B54-23BD-48D6-BE9C-75614FBD3486}|CleanCQRS\\CleanCQRS.csproj|solutionrelative:cleancqrs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82B7A1C1-FCAD-4EEC-B936-138594F5A037}|Aplication\\Application.csproj|c:\\users\\antonio\\desktop\\ds-subastas-t10\\cqrs-tests\\cleancqrs\\aplication\\usecaseuser\\handlers\\queries\\getuserbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82B7A1C1-FCAD-4EEC-B936-138594F5A037}|Aplication\\Application.csproj|solutionrelative:aplication\\usecaseuser\\handlers\\queries\\getuserbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,20 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\Program.cs",
-              "RelativeDocumentMoniker": "CleanCQRS\\Program.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\Program.cs",
-              "RelativeToolTip": "CleanCQRS\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAABsAAAApAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GetUserByIdQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Aplication\\UseCaseUser\\Handlers\\Queries\\GetUserByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "Aplication\\UseCaseUser\\Handlers\\Queries\\GetUserByIdQueryHandler.cs",
+              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Aplication\\UseCaseUser\\Handlers\\Queries\\GetUserByIdQueryHandler.cs",
+              "RelativeToolTip": "Aplication\\UseCaseUser\\Handlers\\Queries\\GetUserByIdQueryHandler.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T18:26:58.055Z",
-              "IsPinned": true
+              "WhenOpened": "2025-05-11T18:13:49.63Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -56,43 +44,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\Repositories\\UserReadRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserReadRepository.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Infrastructure\\Repositories\\UserReadRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\UserReadRepository.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T01:00:42.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "CleanCQRS\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\CleanCQRS\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "CleanCQRS\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAIwD8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T00:54:39.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetUserByIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Aplication\\UseCaseUser\\GetById\\GetUserByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "Aplication\\UseCaseUser\\GetById\\GetUserByIdQueryHandler.cs",
-              "ToolTip": "C:\\Users\\ANTONIO\\Desktop\\DS-SUBASTAS-T10\\CQRS-TESTS\\CleanCQRS\\Aplication\\UseCaseUser\\GetById\\GetUserByIdQueryHandler.cs",
-              "RelativeToolTip": "Aplication\\UseCaseUser\\GetById\\GetUserByIdQueryHandler.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T20:42:29.233Z"
             }
           ]
         }

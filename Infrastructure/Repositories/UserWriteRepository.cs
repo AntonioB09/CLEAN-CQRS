@@ -1,16 +1,17 @@
 ﻿
+using Application.UseCaseUser.IRepositories;
 using Domain.User;
 using Domain.User.ValueObjects;
-using Infrastructure.Data;
+using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories;
 
 internal sealed class UserWriteRepository : IUserWriteRepository
 {
-    private readonly ApplicationWriteDbContext _dbContext;
+    private readonly PostgresDbContext _dbContext;
 
-    public UserWriteRepository(ApplicationWriteDbContext dbContext)
+    public UserWriteRepository(PostgresDbContext dbContext)
     {
         _dbContext = dbContext;
     }

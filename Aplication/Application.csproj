@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="UseCaseUser\ResponseDTos\UserContactInfoResponse.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
     <PackageReference Include="MassTransit" Version="8.4.0" />
     <PackageReference Include="MediatR" Version="12.5.0" />

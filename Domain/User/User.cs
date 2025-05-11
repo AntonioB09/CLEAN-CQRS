@@ -1,13 +1,13 @@
 ﻿
 using Domain.Primitives;
 using Domain.User.ValueObjects;
+using Domain.UserEvent;
 using System.Xml.Linq;
 
+namespace Domain.User;
 
 
-
-namespace Domain.User
-{
+    #region "Atribute user"
     public sealed class User : Entity
     {
         public UserId Id { get; private set; } 
@@ -16,14 +16,15 @@ namespace Domain.User
         public Email Email { get; private set; }
         public PhoneNumber PhoneNumber { get; private set; }
         public Address Address { get; private set; }
-
+    #endregion
 
         private User()
         {
 
         }
-
-        public static User Create(FirstName firstname, LastName lastName, Email email, PhoneNumber phoneNumber, Address address)
+    #region Factory User
+    public static User Create(FirstName firstname, LastName lastName, 
+            Email email, PhoneNumber phoneNumber, Address address)
         {
             var user = new User
             {
@@ -45,17 +46,22 @@ namespace Domain.User
 
             return user;
         }
+    #endregion
 
-        public void UpdateUser(FirstName newFirstname, LastName newLastName, Email newEmail, 
-                               PhoneNumber newPhoneNumber, Address newAddress)
+    #region Metodo Update user
+    public void UpdateUser(UserId userId, FirstName newFirstname, LastName newLastName,
+                               Email newEmail, PhoneNumber newPhoneNumber, Address newAddress)
         {   
+            Id = userId;
             FirstName = newFirstname;
             LastName = newLastName;
             Email = newEmail;
             PhoneNumber = newPhoneNumber;
             Address = newAddress;
 
-           Raise(new UserUpdatedEvent(FirstName,
+           Raise(new UserUpdatedDomainEvent(
+                                      Id,
+                                      FirstName,
                                       LastName,
                                       Email,
                                       PhoneNumber,
@@ -63,6 +69,6 @@ namespace Domain.User
                                       ));
 
         }
-
-    }
+    #endregion
 }
+

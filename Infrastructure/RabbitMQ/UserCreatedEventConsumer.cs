@@ -1,7 +1,4 @@
-﻿
-using Domain.User;
-
-using Infrastructure.Data;
+﻿using Infrastructure.Persistence;
 using MassTransit;
 using MassTransit.Middleware;
 using Microsoft.EntityFrameworkCore;
@@ -9,9 +6,11 @@ using Microsoft.Extensions.Logging;
 using static MassTransit.Transports.ReceiveEndpoint;
 using System.IO;
 using System.Reflection.Emit;
-using Infrastructure.Data.Models;
+using Infrastructure.Persistence.Models;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using Application.UseCaseUser.IRepositories;
+using Domain.UserEvent;
 
 namespace Infrastructure.RabbitMQ;
 

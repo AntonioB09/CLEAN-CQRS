@@ -1,9 +1,9 @@
-﻿using Domain.User;
-using Infrastructure.Data.Models;
-using Infrastructure.Data;
+﻿using Infrastructure.Persistence;
 using MassTransit;
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
+using Domain.UserEvent;
+using Infrastructure.Persistence.Models;
 
 
 namespace Infrastructure.RabbitMQ;

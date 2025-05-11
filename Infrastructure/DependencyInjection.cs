@@ -1,8 +1,8 @@
 ﻿
 
 using Application.Data;
-using Domain.User;
-using Infrastructure.Data;
+using Application.UseCaseUser.IRepositories;
+using Infrastructure.Persistence;
 using Infrastructure.RabbitMQ;
 using Infrastructure.Repositories;
 using MassTransit;
@@ -40,29 +40,15 @@ public static class DependencyInjection
                 mongoDatabaseName
             ));
 
-
-        /* Configuración de MongoDB
-        services.AddSingleton(provider =>
-            new MongoDbContext(
-                configuration.GetConnectionString("MongoDB"),
-                configuration["MongoDB:DatabaseName"]
-            ));*/
-
-        services.AddDbContext<ApplicationWriteDbContext>(options =>
+        services.AddDbContext<PostgresDbContext>(options =>
         {
             options.UseNpgsql(connectionString);
         });
        
-
- 
-
-        services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationWriteDbContext>());
-
-
+        services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<PostgresDbContext>());
 
         services.AddScoped<IUserWriteRepository, UserWriteRepository>();
       
-
 
     }
 

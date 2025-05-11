@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "CleanCQRS.Controllers.UserEndpoints\u002B\u003C\u003Ec",
+    "ContainingType": "CleanCQRS.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapUserEndpoints\u003Eb__0_2",
     "RelativePath": "api/allUsers",
     "HttpMethod": "GET",
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "ContainingType": "CleanCQRS.Controllers.UserEndpoints\u002B\u003C\u003Ec",
+    "ContainingType": "CleanCQRS.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapUserEndpoints\u003Eb__0_1",
     "RelativePath": "api/updateUser/{userId}",
     "HttpMethod": "PUT",
@@ -30,7 +30,7 @@
       },
       {
         "Name": "request",
-        "Type": "Application.UseCaseUser.Update.UpdateUserRequest",
+        "Type": "Application.UseCaseUser.Commands.UpdateUserRequest",
         "IsRequired": true
       }
     ],
@@ -43,7 +43,7 @@
     ]
   },
   {
-    "ContainingType": "CleanCQRS.Controllers.UserEndpoints\u002B\u003C\u003Ec",
+    "ContainingType": "CleanCQRS.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapUserEndpoints\u003Eb__0_0",
     "RelativePath": "api/user",
     "HttpMethod": "POST",
@@ -52,7 +52,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "Application.UseCaseUser.Create.CreateUserCommand",
+        "Type": "Application.UseCaseUser.Commands.CreateUserCommand",
         "IsRequired": true
       }
     ],
@@ -65,9 +65,31 @@
     ]
   },
   {
-    "ContainingType": "CleanCQRS.Controllers.UserEndpoints\u002B\u003C\u003Ec",
+    "ContainingType": "CleanCQRS.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapUserEndpoints\u003Eb__0_3",
     "RelativePath": "api/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CleanCQRS.Endpoints.UserEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUserEndpoints\u003Eb__0_4",
+    "RelativePath": "api/userContactInfo/{userId}",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
