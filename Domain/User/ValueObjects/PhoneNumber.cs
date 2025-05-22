@@ -7,8 +7,7 @@ namespace Domain.User.ValueObjects;
 
 public sealed partial record PhoneNumber 
 {
-    private const int DefaultLenght = 9;
-    private const string Pattern = @"^\+?[1-9]\d{1,14}$";
+    private const string Pattern = @"^[0-9]{9}$";
 
     private PhoneNumber(string value)
     {
@@ -19,7 +18,12 @@ public sealed partial record PhoneNumber
 
     public static Result<PhoneNumber> Create(string value)
     {
-        if (string.IsNullOrEmpty(value) || !PhoneNumberRegex().IsMatch(value) || value.Length != DefaultLenght)
+        if (string.IsNullOrEmpty(value))
+        {
+            return Result.Failure<PhoneNumber>(DomainErrors.PhoneNumberErrors.Empty);
+        }
+
+        if (!PhoneNumberRegex().IsMatch(value))
         {
             return Result.Failure<PhoneNumber>(DomainErrors.PhoneNumberErrors.InvalidFormat);
         }

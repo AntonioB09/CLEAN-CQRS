@@ -45,6 +45,25 @@ public static class DomainErrors
             "Address.Empty",
             "Address is empty.");
 
+        public static readonly Error CountryTooLong = Error.Validation(
+            "Address.CountryTooLong",
+            "Address field Country is too long.");
+
+        public static readonly Error StreetTooLong = Error.Validation(
+            "Address.StreetTooLong",
+            "Address field Street is too long.");
+
+        public static readonly Error CityTooLong = Error.Validation(
+            "Address.CityTooLong",
+            "Address field City is too long.");
+
+        public static readonly Error StateTooLong = Error.Validation(
+            "Address.StateTooLong",
+            "Address field State is too long.");
+
+        public static readonly Error InvalidZipCodeFormat = Error.Validation(
+            "Address.InvalidZipCodeFormat",
+            "ZipCode format is invalid.");
     }
 
     public static class PhoneNumberErrors

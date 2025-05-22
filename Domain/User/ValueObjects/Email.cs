@@ -1,10 +1,13 @@
 ﻿using Domain.Errors;
 using Domain.Shared;
+using System.Text.RegularExpressions;
 
 namespace Domain.User.ValueObjects;
 
 public sealed record Email
 {
+    private static readonly Regex EmailRegex = new Regex(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", RegexOptions.Compiled);
+
     private Email(string value)
     {
         Value = value;
@@ -19,7 +22,7 @@ public sealed record Email
             return Result.Failure<Email>(DomainErrors.EmailErrors.Empty);
         }
 
-        if (email.Split('@').Length != 2)
+        if (!EmailRegex.IsMatch(email))
         {
             return Result.Failure<Email>(DomainErrors.EmailErrors.InvalidFormat);
         }

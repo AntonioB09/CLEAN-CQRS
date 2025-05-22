@@ -1,10 +1,14 @@
 using Domain.Errors;
 using Domain.Shared;
+using System.Text.RegularExpressions;
 
 namespace Domain.User.ValueObjects;
 
 public sealed record Address 
 {
+    public const int MaxLength = 100;
+    private static readonly Regex ZipCodeRegex = new Regex(@"^[0-9]{5}$");
+
     private Address(string country, string street, string city, string state, string zipCode)
     {
         Country = country;
@@ -31,6 +35,31 @@ public sealed record Address
             return Result.Failure<Address>(DomainErrors.AddressErrors.Empty);
         }
 
+        if (country.Length > MaxLength)
+        {
+            return Result.Failure<Address>(DomainErrors.AddressErrors.CountryTooLong);
+        }
+
+        if (street.Length > MaxLength)
+        {
+            return Result.Failure<Address>(DomainErrors.AddressErrors.StreetTooLong);
+        }
+
+        if (city.Length > MaxLength)
+        {
+            return Result.Failure<Address>(DomainErrors.AddressErrors.CityTooLong);
+        }
+
+        if (state.Length > MaxLength)
+        {
+            return Result.Failure<Address>(DomainErrors.AddressErrors.StateTooLong);
+        }
+
+        if (!ZipCodeRegex.IsMatch(zipCode))
+        {
+            return Result.Failure<Address>(DomainErrors.AddressErrors.InvalidZipCodeFormat);
+        }
+        
         return new Address(country, street, city, state, zipCode);
     }
 

@@ -46,9 +46,9 @@ internal sealed class CreateUserCommandHandler : ICommandHandler<CreateUserComma
         }
 
         Result<LastName> lastname = LastName.Create(command.LastName);              
-        if (firstname.IsFailure)
+        if (lastname.IsFailure)
         {
-            return Result.Failure<UserId>(firstname.Error);
+            return Result.Failure<UserId>(lastname.Error);
         }
 
         Result<PhoneNumber> phonenumber = PhoneNumber.Create(command.PhoneNumber);
@@ -57,7 +57,7 @@ internal sealed class CreateUserCommandHandler : ICommandHandler<CreateUserComma
             return Result.Failure<UserId>(phonenumber.Error);
         }
         Result<Address> address = Address.Create(command.Country, command.Street, command.City, command.State, command.ZipCode);
-        if (phonenumber.IsFailure)
+        if (address.IsFailure)
         {
             return Result.Failure<UserId>(address.Error);
         }
